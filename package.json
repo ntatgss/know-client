@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "CLI for the ARK Blockchain",
   "main": "src/index.js",
-  "bin": "src/index.js",
   "repository": "git@github.com:ArkEcosystem/ark-client.git",
   "author": "Brian Faust <hello@brianfaust.me>",
   "license": "MIT",
