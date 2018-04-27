@@ -1,8 +1,8 @@
-![ARK Client](https://i.imgur.com/Sj3s29m.jpg)
+![ARK Client](https://i.imgur.com/eyF8ptI.jpg)
 
-# ark-client
-CLI client for ARK blockchain.
-You can connect to devnet, mainnet or your custom private/public ARK-derived blockchain.
+# know-client
+CLI client for KNOW blockchain.
+You can connect to devnet, mainnet or your custom private/public KNOW-derived blockchain.
 
 Features:
 - connection to network or a node,
@@ -17,20 +17,20 @@ Features:
 # Installation
 You need to have node (version 7.6.0 or newer) installed. Then:
 ```
-$> npm install -g arkecosystem/ark-client#master
-$> ark-client
+$> ./index.js
+$> know-client
     ___         __      _________            __
    /   |  _____/ /__   / ____/ (_)__  ____  / /_
   / /| | / ___/ //_/  / /   / / / _ \/ __ \/ __/
- / ___ |/ /  / ,<    / /___/ / /  __/ / / / /_  
-/_/  |_/_/  /_/|_|   \____/_/_/\___/_/ /_/\__/  
+ / ___ |/ /  / ,<    / /___/ / /  __/ / / / /_
+/_/  |_/_/  /_/|_|   \____/_/_/\___/_/ /_/\__/
 
-ark>
+know>
 ```
 
 # Usage
 ```
-ark> help
+know> help
 
   Commands:
 
@@ -54,32 +54,32 @@ ark> help
 
 
 ```
-ark> connect devnet
+know> connect devnet
 Node: 5.39.9.246:4002, height: 21078
 ark devnet>
 ```
 
 ```
-ark devnet> account create
+know devnet> account create
 Seed    - private: rely cup brand sentence wolf amateur clog knock execute avocado they ready
 WIF     - private: SBHAcXWeCEBDaLVUm4B3idHoLde2qrmi2gkxz8KXtNYfjVMK16pH
 Address - public : DMUeELFkFtN5obvStkV9Zt44GEjEaYgKhH
 ```
 
 ```
-ark devnet> account send 100 AMUeELFkFtN5obvStkV9Zt44GEjEaYgKhH
+know devnet> account send 100 AMUeELFkFtN5obvStkV9Zt44GEjEaYgKhH
 passphrase: ************************************************************************
 Transaction sent successfully with id 7adbf890c88dd345eacbac63e94610fa5f3905528cdc1c36740c3ba3fa3db302
 ```
 
 ```
-ark devnet> account delegate rockingark
+know devnet> account delegate rockingark
 passphrase: **************************************************************************
 Transaction sent successfully with id b857f302611e4f36a33ea886f7bcb951633406ba1f5e40393893234a46ce54eb
 ```
 
 ```
-ark devnet> account status DMUeELFkFtN5obvStkV9Zt44GEjEaYgKhH
+know devnet> account status DMUeELFkFtN5obvStkV9Zt44GEjEaYgKhH
 { address: 'DMUeELFkFtN5obvStkV9Zt44GEjEaYgKhH',
   unconfirmedBalance: '7500000000',
   balance: '7500000000',

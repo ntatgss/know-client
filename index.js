@@ -35,13 +35,13 @@ var ledgerComm   = null;
 
 var networks = {
   devnet: {
-    nethash: "578e820911f24e039733b45e4882b73e301f813a0d2c31330dafda84534ffa23",
+    nethash: "c92f7810d9136be3807d0b3a90b225d6cb96ac10ccbe50cccf5a0d564ab12b02",
     peers: [
-      "167.114.29.51:4002",
-      "167.114.29.52:4002",
-      "167.114.29.53:4002",
-      "167.114.29.54:4002",
-      "167.114.29.55:4002"
+      "35.186.144.213:4442",
+      "35.197.145.143:4442",
+      "35.186.148.16:4442",
+      "35.187.225.104:4442",
+      "35.197.248.199:4442"
     ]
   },
   mainnet: {
@@ -370,7 +370,7 @@ vorpal
     connect2network(network,function(){
       getFromNode('http://'+server+'/peer/status', function(err, response, body){
         self.log("Node: " + server + ", height: " + JSON.parse(body).height);
-        self.delimiter('ark '+args.network+'>');
+        self.delimiter('know '+args.network+'>');
         arkjs.crypto.setNetworkVersion(network.config.version);
         callback();
       });
@@ -406,7 +406,7 @@ vorpal
       if(err){
         self.log(colors.red("Public API unreacheable on this server "+server+" - "+err));
         server=null;
-        self.delimiter('ark>');
+        self.delimiter('know>');
         return callback();
       }
       try {
@@ -416,7 +416,7 @@ vorpal
         self.log(colors.red("API is not returning expected result:"));
         self.log(body);
         server=null;
-        self.delimiter('ark>');
+        self.delimiter('know>');
         return callback();
       }
 
@@ -434,7 +434,7 @@ vorpal
         console.log(network.config);
       });
       self.log("Connected to network " + nethash + colors.green(" ("+networkname+")"));
-      self.delimiter('ark '+server+'>');
+      self.delimiter('know '+server+'>');
       getFromNode('http://'+server+'/peer/status', function(err, response, body){
         self.log("Node height ", JSON.parse(body).height);
       });
@@ -447,7 +447,7 @@ vorpal
   .action(function(args, callback) {
 		var self = this;
     self.log("Disconnected from "+server);
-    self.delimiter('ark>');
+    self.delimiter('know>');
     server=null;
     network=null;
     callback();
@@ -1105,10 +1105,10 @@ vorpal
     callback();
   });
 
-vorpal.history('ark-client');
+vorpal.history('know-client');
 
-vorpal.log(colors.cyan(figlet.textSync("Ark Client","Slant")));
+vorpal.log(colors.cyan(figlet.textSync("know Client","Slant")));
 
 vorpal
-  .delimiter('ark>')
+  .delimiter('know>')
   .show();
