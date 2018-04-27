@@ -17,6 +17,7 @@ Features:
 # Installation
 You need to have node (version 7.6.0 or newer) installed. Then:
 ```
+$> npm install
 $> ./index.js
 $> know-client
     ___         __      _________            __
@@ -55,8 +56,8 @@ know> help
 
 ```
 know> connect devnet
-Node: 5.39.9.246:4002, height: 21078
-ark devnet>
+Node: 35.197.248.199:4442, height: 88638
+know devnet>
 ```
 
 ```
