@@ -35,7 +35,7 @@ var ledgerComm   = null;
 
 var networks = {
   devnet: {
-    nethash: "c92f7810d9136be3807d0b3a90b225d6cb96ac10ccbe50cccf5a0d564ab12b02",
+    nethash: "06044f170b5786f626a2e574aa969be5227cc39922d2745f12b51dc4b9cd50d2",
     peers: [
       "35.186.144.213:4442",
       "35.197.145.143:4442",
