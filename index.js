@@ -34,8 +34,14 @@ var ledgerBridge = null;
 var ledgerComm   = null;
 
 var networks = {
+    testnet: {
+        nethash: "18cb4b74719a9fd7db8980fadffda6aa88340e832a3ca700fd6d11df5444e641",
+        peers: [
+            "127.0.0.1:4441",
+        ]
+    },
   devnet: {
-    nethash: "06044f170b5786f626a2e574aa969be5227cc39922d2745f12b51dc4b9cd50d2",
+    nethash: "c32245a81ad0df2c8fa3f4989ebf0399089c253ded86db26566b50570c77b1ce",
     peers: [
       "35.186.144.213:4442",
       "35.197.145.143:4442",
@@ -542,6 +548,7 @@ vorpal
   .command('account status <address>', 'Get account status')
   .action(function(args, callback) {
     var self = this;
+    self.log(server);
     if(!server){
       self.log("please connect to node or network before");
       return callback();
