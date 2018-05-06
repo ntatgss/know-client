@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-var arkjs = require("arkjs");
+var arkjs = require("know-js");
 var crypto = require("crypto");
 var figlet = require("figlet");
 var colors = require("colors");
