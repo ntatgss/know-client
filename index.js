@@ -41,7 +41,7 @@ var networks = {
         ]
     },
   devnet: {
-    nethash: "c32245a81ad0df2c8fa3f4989ebf0399089c253ded86db26566b50570c77b1ce",
+    nethash: "44d70660abc8502a8adb1bf6be1bde8929d67804742b00af06323656099dd4a0",
     peers: [
       "35.186.144.213:4442",
       "35.197.145.143:4442",
